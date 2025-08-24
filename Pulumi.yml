@@ -1,0 +1,7 @@
+name: democratic-csi
+runtime:
+  name: nodejs
+  options:
+    typescript: true
+description: Democratic CSI storage driver for Kubernetes via Pulumi
+main: src/index.ts

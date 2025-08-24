@@ -1,0 +1,25 @@
+config:
+  democratic-csi:storageClasses:
+    - name: "truenas-ssd-mirror-nfs"
+      pool: "ssd-mirror-pool"
+      driverType: "nfs"
+      defaultClass: true
+      reclaimPolicy: "Retain"
+      volumeBindingMode: "Immediate"
+      allowVolumeExpansion: true
+
+    - name: "truenas-hdd-stripe-nfs"
+      pool: "hdd-stripe-pool"
+      driverType: "nfs"
+      defaultClass: false
+      reclaimPolicy: "Retain"
+      volumeBindingMode: "Immediate"
+      allowVolumeExpansion: true
+
+    - name: "truenas-hdd-mirror-iscsi"
+      pool: "hdd-mirror-pool"
+      driverType: "iscsi"
+      defaultClass: false
+      reclaimPolicy: "Retain"
+      volumeBindingMode: "Immediate"
+      allowVolumeExpansion: true
